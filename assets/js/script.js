@@ -1,5 +1,6 @@
-require('dotenv').config();
+// const apiKey = process.env.API_KEY;
 const apiKey = process.env.API_KEY;
+
 const btnSearch = document.querySelector('#btn-search')
 const inSearch = document.querySelector('#search')
 
@@ -24,8 +25,9 @@ btnSearch.addEventListener('click', (e) => {
     e.preventDefault();
 
     const city = inSearch.value;
-
     showWeatherData(city)
+
+
 
 
 });
@@ -65,3 +67,5 @@ const renderResult = async (city) => {
             </div>
     `
 }
+
+export default getWeatherData

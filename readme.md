@@ -4,14 +4,14 @@ Este repositório contém um projeto de clima criado em JavaScript utilizando um
 
 ## Funcionalidades
 
-O projeto de clima permite aos usuários inserir o nome de uma cidade e visualizar as informações meteorológicas atuais, incluindo temperatura, umidade, velocidade do vento e condições climáticas gerais. As informações são atualizadas automaticamente a cada 10 minutos para fornecer dados precisos em tempo real.
+O projeto de clima permite aos usuários inserir o nome de uma cidade e visualizar as informações meteorológicas atuais, incluindo temperatura e velocidade do vento. As informações são atualizadas automaticamente a cada 10 minutos para fornecer dados precisos em tempo real.
 
 ## Tecnologias Utilizadas
 
 O projeto foi criado utilizando as seguintes tecnologias:
 
 - HTML
-- CSS
+- Sass
 - JavaScript
 - API de clima (OpenWeatherMap)
 
@@ -20,10 +20,14 @@ O projeto foi criado utilizando as seguintes tecnologias:
 Para utilizar o projeto de clima, siga os passos abaixo:
 
 1. Clone o repositório para o seu computador.
-2. Crie uma conta na API do OpenWeatherMap (https://openweathermap.org/api) e obtenha uma chave de API gratuita.
-3. No arquivo `script.js`, substitua a constante `apiKey` pela sua chave de API obtida no passo anterior.
-4. Abra o arquivo `index.html` em um navegador da web.
-5. Insira o nome de uma cidade na caixa de pesquisa e pressione Enter para obter as informações meteorológicas.
+2. Antes de executar o projeto, é necessário instalar as dependências. Isso pode ser feito utilizando o NPM:
+```bash
+  npm install 
+```
+3. Crie uma conta na API do OpenWeatherMap (https://openweathermap.org/api) e obtenha uma chave de API gratuita. 
+4. No arquivo `script.js`, substitua a constante `apiKey` pela sua chave de API obtida no passo anterior.
+5. Abra o arquivo `index.html` em um navegador da web.
+6. Insira o nome de uma cidade na caixa de pesquisa e pressione Enter para obter as informações meteorológicas.
 
 ## Coisas a Fazer
 
@@ -38,3 +42,4 @@ Sinta-se à vontade para contribuir para o projeto enviando pull requests ou abr
 ## Licença
 
 Este projeto é licenciado sob a licença MIT. Consulte o arquivo LICENSE para obter mais informações.
+
