@@ -1,6 +1,4 @@
-// const apiKey = process.env.API_KEY;
-const apiKey = process.env.API_KEY;
-
+const apiKey = 'b29103c654763e03cdd2788c9c310f44' 
 const btnSearch = document.querySelector('#btn-search')
 const inSearch = document.querySelector('#search')
 
@@ -26,9 +24,6 @@ btnSearch.addEventListener('click', (e) => {
 
     const city = inSearch.value;
     showWeatherData(city)
-
-
-
 
 });
 
@@ -67,5 +62,3 @@ const renderResult = async (city) => {
             </div>
     `
 }
-
-export default getWeatherData
