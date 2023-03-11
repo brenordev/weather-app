@@ -1,0 +1,208 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300&display=swap");
+@keyframes entranceAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #EBECF1;
+}
+
+.main {
+  max-width: 1440px;
+  width: 100%;
+  padding: 0 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0 2%;
+}
+
+input[type=search]::-webkit-search-decoration,
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-results-button,
+input[type=search]::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+}
+
+* {
+  font-family: "Kanit", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.btn {
+  padding: 8px 16px;
+  border-radius: 4px;
+}
+
+.btn-repository {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #212121;
+  color: #212121;
+  transition: all 0.5s ease;
+}
+.btn-repository .icon-github {
+  font-size: 1.5rem;
+}
+.btn-repository:hover {
+  color: #F5F5F5;
+  background-color: #393E46;
+  transform: translateY(-3px);
+}
+
+.input {
+  max-width: 300px;
+  width: 100%;
+  background-color: #F5F5F5;
+  border: 1px solid #D3D4D8;
+  color: #212121;
+  font-size: 1.4rem;
+  padding: 12px 8px 12px 26px;
+  border-radius: 4px;
+  background: #F7F7F7;
+  box-shadow: 0 0 5px rgba(33, 33, 33, 0.1);
+  box-shadow: inset 5px 5px 10px #F7F7F7, inset -5px -5px 10px #F7F7F7;
+  transition: all 0.5s ease;
+  font-weight: 300;
+}
+.input::placeholder {
+  color: #212121;
+  opacity: 0.7;
+  font-weight: 700;
+  transition: all 0.5s ease;
+}
+.input:focus {
+  border-color: #212121;
+  box-shadow: 0 0 5px rgba(33, 33, 33, 0.3);
+}
+.input:focus::placeholder {
+  opacity: 0.15;
+}
+.input:focus .btn-search {
+  border-color: #212121 !important;
+}
+
+.footer {
+  max-width: 1440px;
+  width: 100%;
+  padding: 0 2%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5rem;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+.footer__developed-by {
+  font-size: 1.2rem;
+}
+.footer__developed-by--link {
+  color: #393E46;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.container {
+  max-width: 500px;
+  width: 100%;
+  padding: 2rem 0;
+}
+.container__search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px;
+  margin-bottom: 2rem;
+}
+.container__search .icon-gps,
+.container__search .btn-search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 35px;
+  height: 35px;
+  border-radius: 4px;
+  background-color: #393E46;
+  font-size: 2rem;
+  padding: 4px;
+  box-shadow: 0 0 5px rgba(33, 33, 33, 0.3);
+  color: #F5F5F5;
+}
+.container__search .icon-gps {
+  transform: translateX(18px);
+}
+.container__search .btn-search {
+  transform: translate(-18px);
+  cursor: pointer;
+  color: #F5F5F5;
+  transition: all 0.5s ease;
+}
+.container__search .btn-search:hover {
+  background-color: #F5F5F5;
+  color: #212121;
+}
+.container__display {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 32px;
+  color: #212121;
+  font-size: 2rem;
+  padding: 8px;
+  color: #F5F5F5;
+}
+.container__display__title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #212121;
+  font-size: 1.8rem;
+  padding: 8px;
+  border-radius: 4px;
+  animation: entranceAnimation 1s ease;
+}
+.container__display__title .heading {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  padding: 4px;
+}
+.container__display__title span {
+  opacity: 0.6;
+}
+.container__display__description {
+  color: #212121;
+}
+
+/*# sourceMappingURL=styles.css.map */

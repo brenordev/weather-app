@@ -1,0 +1,23 @@
+@use '../abstract/variables' as *;
+@use '../abstract/mixins' as *;
+.btn{
+    padding: 8px 16px;
+    border-radius: 4px;
+}
+.btn-repository{
+    @include flex-center;
+    gap: 8px;
+    border: 1px solid $gray-dark;
+    color: $gray-dark;
+    transition: all .5s ease;
+
+    .icon-github{
+        font-size: 1.5rem;
+    }
+
+    &:hover{
+        color: $color-gray;
+        background-color: $terciary-color;
+        transform: translateY(-3px);
+    }
+}

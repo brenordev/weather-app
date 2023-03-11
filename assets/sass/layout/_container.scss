@@ -1,0 +1,80 @@
+@use '../abstract/variables' as *;
+@use '../abstract/mixins' as *;
+
+.container{
+    max-width: 500px;
+    width: 100%;
+    padding: 2rem 0;
+
+    &__search{
+        @include flex-center;
+        padding: 4px;
+        margin-bottom: 2rem;
+
+        .icon-gps,
+        .btn-search{
+            @include styles-icon;
+            
+        }
+        .icon-gps{
+            transform: translateX(18px);
+        }
+        .btn-search{
+            transform: translate(-18px);
+            cursor: pointer;
+            color: $color-gray;
+            transition: all .5s ease;
+
+            &:hover{
+                background-color: $color-gray;
+                color: $gray-dark;
+            }
+
+        }
+
+    }
+
+    &__display{
+        @include flex-between;
+        flex-wrap: wrap;
+        gap: 32px;
+        color: $gray-dark;
+        font-size: $font-medium;
+        padding: 8px;
+        color: $color-gray;
+
+        &__title{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: $gray-dark;
+            font-size: 1.8rem;
+            padding: 8px;
+            border-radius: 4px;
+            animation: entranceAnimation 1s ease;
+
+
+
+            .heading{
+                width: 100%;
+                @include flex-center;
+                gap: 12px;
+                padding: 4px;
+
+
+
+            }
+
+            span{
+                opacity: .6;
+            }
+        }
+
+        &__description{
+            color: $gray-dark;
+        }
+    }
+
+    
+}

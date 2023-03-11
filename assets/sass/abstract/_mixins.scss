@@ -1,0 +1,31 @@
+@use '../abstract/variables' as *;
+
+@mixin flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin flex-between{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin max-width {
+    max-width: 1440px;
+    width: 100%;
+    padding: 0 2%;
+}
+
+@mixin styles-icon{
+    @include flex-center;
+            min-width: 35px;
+            height: 35px;
+            border-radius: 4px;
+            background-color: $terciary-color;
+            font-size: $font-medium;
+            padding: 4px;
+            box-shadow: 0 0 5px rgba($gray-dark, $alpha: .3);
+            color: $color-gray;
+
+}

@@ -1,0 +1,24 @@
+@use '../abstract/variables' as *;
+@use '../abstract/mixins' as *;
+
+.footer{
+    @include max-width;
+    @include flex-between;
+    height: 5rem;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    font-size: $font-small-two;
+    font-weight: $font-thin-big;
+
+    &__developed-by{
+        font-size: $font-small-two;
+
+        &--link{
+            color: $terciary-color;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    }
+}
