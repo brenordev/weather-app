@@ -1,39 +1,51 @@
-const apiKey = 'b29103c654763e03cdd2788c9c310f44' 
+const apiKey = '6391b43302dde089068f12d8e9628db7' 
 const btnSearch = document.querySelector('#btn-search')
-const inSearch = document.querySelector('#search')
+let inSearch = document.querySelector('#search')
+const display = document.querySelector('.container__display')
 
 
 const getWeatherData = async (city) => {
     const apiWeatherURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}&lang=pt_br`;
 
-    const res = await fetch(apiWeatherURL);
-    const data = await res.json();
-
-    return data;
+    try {
+        const res = await fetch(apiWeatherURL);
+        if (!res.ok) {
+            throw new Error('Cidade não encontrada. Verifique se o nome está correto.');
+        }
+        const data = await res.json();
+        return data;
+    } catch (error) {
+        throw new Error('Ocorreu um erro ao obter os dados meteorológicos.');
+    }
 };
-
 const showWeatherData = async (city) => {
-
-    const data = await getWeatherData(city);
-    renderResult(city)
-}
-
+    try {
+        const data = await getWeatherData(city);
+        renderResult(city, data);
+    } catch (error) {
+        alert(error.message);
+    }
+};
 
 btnSearch.addEventListener('click', (e) => {
     e.preventDefault();
-
     const city = inSearch.value;
     showWeatherData(city)
+});
 
+inSearch.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+        e.preventDefault();
+        const city = inSearch.value;
+        showWeatherData(city);
+    }
 });
 
 const renderResult = async (city) => {
     const data = await getWeatherData(city);
 
-    const display = document.querySelector('.container__display')
 
     display.innerHTML = `
-    
     <div class="container__display__title">
                     <h5 class="heading">
                         <i class="fa-solid fa-map-location-dot"></i>
